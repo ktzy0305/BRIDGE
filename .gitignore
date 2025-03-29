@@ -300,4 +300,4 @@ dist
 .DS_Store
 
 # Forum Data
-./data/forum/*
+data/forum/*
