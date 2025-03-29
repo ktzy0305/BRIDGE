@@ -300,4 +300,5 @@ dist
 .DS_Store
 
 # Forum Data
-data/forum/*
+data/forum/forum_data_for_dialogue_generation.csv
+data/forum/forum_data_sept_2024.csv
