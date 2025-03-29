@@ -1,0 +1,10 @@
+from components.conversational_subtopic.diversification.prompt import CONVERSATIONAL_SUBTOPIC_DIVERSIFICATION_PROMPT
+from langchain_core.prompts.chat import ChatPromptTemplate
+from schemas.conversational_subtopic import ConversationalSubtopics
+
+conversational_subtopic_diversification_prompt_template = ChatPromptTemplate.from_messages([
+    ("system", CONVERSATIONAL_SUBTOPIC_DIVERSIFICATION_PROMPT)
+])
+
+def create_conversational_subtopic_diversification_chain(llm):
+    return conversational_subtopic_diversification_prompt_template | llm.with_structured_output(ConversationalSubtopics)
